@@ -44,7 +44,40 @@ Permette di impostare un tempo e ricevere un segnale acustico alla fine.
 - Impostazione tempo  
 - Avvio / stop  
 - Segnale acustico finale  
-</p>
+</p
+  <h2>Codice</h2>
+
+<button onclick="copiaCodice()" style="margin-bottom:10px; padding:8px 12px; background:#20a8ff; border:none; color:white; cursor:pointer;">
+Copia codice
+</button>
+
+<pre id="codice" style="background:#020617; padding:15px; border-radius:8px; overflow:auto;">
+// ESP32C3 Timer Cucina
+
+int buzzer = 8;
+
+void setup() {
+  pinMode(buzzer, OUTPUT);
+}
+
+void loop() {
+  delay(5000);
+
+  tone(buzzer, 1000);
+  delay(1000);
+  noTone(buzzer);
+
+  delay(5000);
+}
+</pre>
+
+<script>
+function copiaCodice() {
+  let testo = document.getElementById("codice").innerText;
+  navigator.clipboard.writeText(testo);
+  alert("Codice copiato!");
+}
+</script>
 
 <br>
 
