@@ -1,59 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Laboratorio Roby</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROBERTO64RM - Laboratorio Maker</title>
 
   <style>
     body {
-      font-family: Arial;
-      background-color: #0f172a;
-      color: #e2e8f0;
-      margin: 40px;
+      margin: 0;
+      background-color: #06122b;
+      color: #e6edf7;
+      font-family: Arial, sans-serif;
+    }
+
+    .contenitore {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 30px 60px 30px;
     }
 
     h1 {
-      color: #38bdf8;
+      margin: 0;
+      text-align: center;
+      color: #20a8ff;
+      font-size: 64px;
+      font-weight: bold;
     }
 
     h2 {
-      color: #22c55e;
-      margin-top: 30px;
+      margin-top: 20px;
+      margin-bottom: 50px;
+      text-align: center;
+      color: #20e070;
+      font-size: 42px;
+      font-weight: bold;
     }
 
-    p {
-      line-height: 1.6;
+    .lista-progetti {
+      margin-top: 20px;
+    }
+
+    .voce {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      font-size: 28px;
+    }
+
+    .numero {
+      width: 60px;
+      color: #20a8ff;
+      font-weight: bold;
+    }
+
+    .testo a {
+      color: #20e070;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .testo a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
+  <div class="contenitore">
+    <h1>ROBERTO64RM</h1>
+    <h2>Laboratorio Maker</h2>
 
-<h1>Understanding Ethernet and USB Hubs</h1>
-
-<h2>Introduzione</h2>
-<p>
-Ethernet and USB hubs are essential components in creating efficient network setups.
-These devices allow multiple connections, making them indispensable for both professional and home use.
-</p>
-
-<h2>Ethernet hub vs switch</h2>
-<p>
-An Ethernet hub repeats data to all ports, while a switch sends data only to the correct device.
-For this reason, modern networks use switches instead of hubs.
-</p>
-
-<h2>USB hub</h2>
-<p>
-A USB hub expands a single port into multiple connections.
-Powered hubs are better for devices that require more energy.
-</p>
-
-<h2>PoE</h2>
-<p>
-Power over Ethernet allows both power and data to travel through the same cable,
-commonly used for cameras and access points.
-</p>
-
+    <div class="lista-progetti">
+      <div class="voce"><div class="numero">1</div><div class="testo"><a href="#">prg1</a></div></div>
+      <div class="voce"><div class="numero">2</div><div class="testo"><a href="#">prg2</a></div></div>
+      <div class="voce"><div class="numero">3</div><div class="testo"><a href="#">prg3</a></div></div>
+      <div class="voce"><div class="numero">4</div><div class="testo"><a href="#">prg4</a></div></div>
+      <div class="voce"><div class="numero">5</div><div class="testo"><a href="#">prg5</a></div></div>
+      <div class="voce"><div class="numero">6</div><div class="testo"><a href="#">prg6</a></div></div>
+      <div class="voce"><div class="numero">7</div><div class="testo"><a href="#">prg7</a></div></div>
+      <div class="voce"><div class="numero">8</div><div class="testo"><a href="#">prg8</a></div></div>
+      <div class="voce"><div class="numero">9</div><div class="testo"><a href="#">prg9</a></div></div>
+      <div class="voce"><div class="numero">10</div><div class="testo"><a href="#">prg10</a></div></div>
+    </div>
+  </div>
 </body>
 </html>
