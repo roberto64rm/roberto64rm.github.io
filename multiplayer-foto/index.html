@@ -1,33 +1,306 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>MultiPlayer FOTO RFID</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef2f5;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #152536, #284b63);
+            color: white;
+            padding: 42px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.1rem;
+        }
+
+        main {
+            width: min(1050px, 92%);
+            margin: 35px auto;
+        }
+
+        .presentazione {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 32px;
+            align-items: start;
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .copertina {
+            min-height: 390px;
+            padding: 28px;
+            background: linear-gradient(160deg, #233d4d, #4f6d7a);
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .copertina h2 {
+            font-size: 2rem;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .copertina p {
+            margin: 5px 0;
+        }
+
+        .descrizione h2 {
+            margin-top: 0;
+            color: #233d4d;
+        }
+
+        .sezione {
+            margin-top: 32px;
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+        }
+
+        .sezione h2 {
+            margin-top: 0;
+            color: #233d4d;
+        }
+
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+
+        .file-card {
+            border: 1px solid #d5dde3;
+            border-radius: 10px;
+            padding: 20px;
+            background: #f8fafb;
+        }
+
+        .file-card h3 {
+            margin-top: 0;
+            color: #284b63;
+        }
+
+        .pulsante {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 17px;
+            background: #284b63;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .pulsante:hover {
+            background: #152536;
+        }
+
+        .nota {
+            padding: 15px;
+            background: #fff7d6;
+            border-left: 5px solid #d5a500;
+            border-radius: 5px;
+        }
+
+        footer {
+            margin-top: 45px;
+            padding: 25px 15px;
+            background: #152536;
+            color: white;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+
+        code {
+            background: #e8edf0;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 760px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .presentazione {
+                grid-template-columns: 1fr;
+            }
+
+            .copertina {
+                min-height: 300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
+<header>
     <h1>MultiPlayer FOTO RFID</h1>
+    <p>Materiale digitale di supporto al libro</p>
+</header>
 
-    <p>
-        Materiale digitale di supporto al libro
-        <strong>MultiPlayer FOTO RFID</strong>.
-    </p>
+<main>
 
-    <h2>Programmi</h2>
+    <section class="presentazione">
 
-    <ul>
-        <li>Programma Python per Raspberry Pi</li>
-        <li>Firmware ESP32</li>
-        <li>Esempio del file rfid_map.json</li>
-    </ul>
+        <div class="copertina">
+            <p>Laboratorio Maker</p>
+            <h2>MultiPlayer FOTO RFID</h2>
+            <p>Progettare e costruire un archivio fotografico interattivo</p>
+            <p>Raspberry Pi · ESP32 · RFID · HDMI</p>
+        </div>
 
-    <p>
-        I file disponibili in questa pagina corrispondono
-        alla versione del progetto descritta nel libro.
-    </p>
+        <div class="descrizione">
+            <h2>Il progetto</h2>
+
+            <p>
+                MultiPlayer FOTO RFID è un dispositivo dedicato alla consultazione
+                di fotografie, video e musica conservati su SSD.
+            </p>
+
+            <p>
+                Ogni viaggio o evento viene selezionato mediante una scheda RFID.
+                Il Raspberry Pi gestisce i contenuti multimediali e l’uscita HDMI,
+                mentre l’ESP32 controlla lettore RFID, display touch, LED e beeper.
+            </p>
+
+            <p>
+                Questa pagina contiene i programmi e i file di supporto relativi
+                alla versione descritta nel libro.
+            </p>
+
+            <p>
+                <strong>Autore:</strong> Roberto Seghini
+            </p>
+
+            <p>
+                <strong>Collana:</strong> Laboratorio Maker – Progetti di Elettronica
+            </p>
+        </div>
+
+    </section>
+
+    <section class="sezione">
+        <h2>Programmi e file</h2>
+
+        <div class="file-grid">
+
+            <div class="file-card">
+                <h3>Programma Raspberry Pi</h3>
+                <p>
+                    File Python principale per la gestione degli album,
+                    dello slideshow, della musica e della comunicazione seriale.
+                </p>
+
+                <a class="pulsante" href="main.py" download>
+                    Scarica main.py
+                </a>
+            </div>
+
+            <div class="file-card">
+                <h3>Firmware ESP32</h3>
+                <p>
+                    Sketch Arduino per lettore RFID, display touch,
+                    LED RGB, beeper e collegamento UART.
+                </p>
+
+                <a class="pulsante" href="MultiPlayer_FOTO.ino" download>
+                    Scarica firmware ESP32
+                </a>
+            </div>
+
+            <div class="file-card">
+                <h3>Mappa RFID di esempio</h3>
+                <p>
+                    Esempio della struttura utilizzata per associare
+                    gli UID delle schede alle cartelle degli album.
+                </p>
+
+                <a class="pulsante" href="rfid_map_esempio.json" download>
+                    Scarica JSON
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sezione">
+        <h2>Struttura di un album</h2>
+
+        <pre><code>Nome dell'album/
+├── cover.jpg
+├── config.txt
+├── 001.jpg
+├── 002.jpg
+├── 003.jpg
+├── musica_01.mp3
+└── musica_02.mp3</code></pre>
+
+        <p>Il file <code>config.txt</code> contiene le informazioni dell’album:</p>
+
+        <pre><code>titolo=Gita Lago di Trevignano
+modo=random
+musica=on
+tempo_foto=7
+descrizione=Una giornata sul lago</code></pre>
+    </section>
+
+    <section class="sezione">
+        <h2>Versione del materiale</h2>
+
+        <p>
+            I programmi disponibili in questa pagina devono corrispondere
+            alla versione definitiva utilizzata durante il collaudo del dispositivo.
+        </p>
+
+        <div class="nota">
+            Versione editoriale: MPF5<br>
+            Stato: preparazione del materiale digitale
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p><strong>MultiPlayer FOTO RFID</strong></p>
+    <p>Laboratorio Maker – Progetti di Elettronica</p>
+    <p>Roberto Seghini</p>
+</footer>
 
 </body>
 </html>
